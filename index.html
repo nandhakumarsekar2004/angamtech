@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngamTech - Leading IT Solutions & Training Company in Tamil Nadu</title>
+    <meta name="description" content="AngamTech IT Solutions - Premier technology company in Dharmapuri, Tamil Nadu. Offering Full Stack Development, AI Solutions, Digital Marketing, and Professional Training Programs with 100% placement assistance.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="cube-wrapper">
+                <div class="cube">
+                    <div class="face front">A</div>
+                    <div class="face back">T</div>
+                    <div class="face right">I</div>
+                    <div class="face left">T</div>
+                    <div class="face top">S</div>
+                    <div class="face bottom">L</div>
+                </div>
+            </div>
+            <div class="loading-text">Loading AngamTech...</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg glass-nav">
+            <div class="container">
+                <a class="navbar-brand logo-3d" href="index.html">
+                    <img src="assets/images/logo.jpg" alt="AngamTech Logo" class="logo-image">
+                    <span class="gradient-text">AngamTech</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="internship.html">Internship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-glow ms-3" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-header" style="min-height: 100vh;">
+        <div class="animated-bg"></div>
+        <div class="floating-particles"></div>
+        
+        <div class="container">
+            <div class="row align-items-center" style="min-height: 100vh;">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title text-white mb-4">
+                            Transform Your Future with <span class="typing-text text-warning">Innovation</span>
+                        </h1>
+                        <p class="hero-subtitle mb-4">
+                            Leading IT Solutions company in Dharmapuri, Tamil Nadu. We specialize in cutting-edge 
+                            Full Stack Development, AI Solutions, Digital Marketing, and Professional Training Programs 
+                            with 100% placement assistance and real-world project experience.
+                        </p>
+                        <div class="hero-buttons mb-5">
+                            <a href="services.html" class="btn btn-3d me-3" style="background: white; color: var(--primary-color);">
+                                <i class="fas fa-rocket me-2"></i>Explore Services
+                            </a>
+                            <a href="courses.html" class="btn btn-3d" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">
+                                <i class="fas fa-graduation-cap me-2"></i>Start Learning
+                            </a>
+                        </div>
+                        
+                        <div class="hero-stats stats-section">
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="stat-item bg-white bg-opacity-10 rounded-4 p-3 text-center">
+                                        <h3 class="counter text-white" data-target="500">0</h3>
+                                        <p class="text-white-50 mb-0">Projects Delivered</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item bg-white bg-opacity-10 rounded-4 p-3 text-center">
+                                        <h3 class="counter text-white" data-target="1200">0</h3>
+                                        <p class="text-white-50 mb-0">Students Trained</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item bg-white bg-opacity-10 rounded-4 p-3 text-center">
+                                        <h3 class="counter text-white" data-target="98">0</h3>
+                                        <p class="text-white-50 mb-0">Success Rate %</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="hero-image position-relative">
+                        <!-- Floating Technology Cards -->
+                        <div class="floating-card card-1">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-robot"></i>
+                            <span>AI/ML</span>
+                        </div>
+                        <div class="floating-card card-4">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="floating-card card-5">
+                            <i class="fas fa-database"></i>
+                            <span>Database</span>
+                        </div>
+                        <div class="floating-card card-6">
+                            <i class="fab fa-aws"></i>
+                            <span>Cloud</span>
+                        </div>
+                        
+                        <!-- 3D Central Element -->
+                        <div class="hero-3d-object">
+                            <div class="cube-container">
+                                <div class="cube-3d">
+                                    <div class="face front"><i class="fas fa-code"></i></div>
+                                    <div class="face back"><i class="fas fa-database"></i></div>
+                                    <div class="face right"><i class="fas fa-mobile-alt"></i></div>
+                                    <div class="face left"><i class="fas fa-cloud"></i></div>
+                                    <div class="face top"><i class="fas fa-brain"></i></div>
+                                    <div class="face bottom"><i class="fas fa-chart-line"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Our Premium <span class="text-gradient">Services</span></h2>
+                    <p class="section-subtitle">Comprehensive IT Solutions designed to accelerate your business growth and career advancement</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card-hover-1 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Full Stack Development</h4>
+                        <p>Complete web application development using modern technologies like React, Node.js, Python, and cloud platforms with real-time project experience.</p>
+                        <a href="services.html" class="service-link">
+                            Explore Details <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card-hover-2 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>AI Agent Development</h4>
+                        <p>Cutting-edge artificial intelligence solutions including chatbots, automation systems, and machine learning implementations for business optimization.</p>
+                        <a href="services.html" class="service-link">
+                            Explore Details <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card-hover-3 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Digital Marketing</h4>
+                        <p>Strategic digital marketing solutions including SEO, social media marketing, content strategy, and performance analytics to boost your online presence.</p>
+                        <a href="services.html" class="service-link">
+                            Explore Details <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card-hover-4 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>CRM Development</h4>
+                        <p>Custom Customer Relationship Management systems with advanced features, analytics, and integrations tailored to your business requirements.</p>
+                        <a href="services.html" class="service-link">
+                            Explore Details <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card-hover-5 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Professional Training</h4>
+                        <p>Industry-focused training programs with hands-on projects, expert mentorship, and 100% placement assistance in top IT companies.</p>
+                        <a href="courses.html" class="service-link">
+                            Explore Details <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card-hover-6 h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4>Internship Programs</h4>
+                        <p>Comprehensive internship opportunities with real-world projects, industry exposure, and direct pathway to full-time employment.</p>
+                        <a href="internship.html" class="service-link">
+                            Explore Details <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Highlights -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Featured <span class="text-gradient">Training Programs</span></h2>
+                    <p class="section-subtitle">Master cutting-edge technologies with expert guidance and guaranteed placement assistance</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="course-card hover-tilt card-hover-7">
+                        <div class="course-image">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Full Stack Development with AI" class="img-fluid">
+                            <div class="course-overlay">
+                                <span class="course-duration">
+                                    <i class="fas fa-clock me-1"></i>30 Days
+                                </span>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <h4>Full Stack Web Development with AI Integration</h4>
+                            <p>Master HTML5, CSS3, JavaScript, React.js, Node.js, PHP, Bootstrap, Tailwind CSS, MySQL, and AI integration with hands-on projects.</p>
+                            <div class="course-features">
+                                <span><i class="fas fa-calendar-alt"></i> 30 Days</span>
+                                <span><i class="fas fa-users"></i> Online/Offline</span>
+                                <span><i class="fas fa-certificate"></i> Certified</span>
+                                <span><i class="fas fa-briefcase"></i> Job Assured</span>
+                            </div>
+                            <a href="courses.html" class="btn btn-glow w-100 mt-3">
+                                <i class="fas fa-play me-2"></i>Start Learning
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="course-card hover-tilt card-hover-8">
+                        <div class="course-image">
+                            <img src="/placeholder.svg?height=250&width=400" alt="AI Prompt Engineering" class="img-fluid">
+                            <div class="course-overlay">
+                                <span class="course-duration">
+                                    <i class="fas fa-clock me-1"></i>15 Days
+                                </span>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <h4>Advanced AI Prompt Engineering</h4>
+                            <p>Learn professional prompt engineering techniques for ChatGPT, Claude, Gemini, and other AI models with practical applications.</p>
+                            <div class="course-features">
+                                <span><i class="fas fa-calendar-alt"></i> 15 Days</span>
+                                <span><i class="fas fa-users"></i> Online/Offline</span>
+                                <span><i class="fas fa-certificate"></i> Certified</span>
+                                <span><i class="fas fa-rocket"></i> Advanced</span>
+                            </div>
+                            <a href="courses.html" class="btn btn-glow w-100 mt-3">
+                                <i class="fas fa-play me-2"></i>Start Learning
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="course-card hover-tilt card-hover-1">
+                        <div class="course-image">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Interview Preparation" class="img-fluid">
+                            <div class="course-overlay">
+                                <span class="course-duration">
+                                    <i class="fas fa-clock me-1"></i>10 Days
+                                </span>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <h4>Technical Interview Mastery</h4>
+                            <p>Comprehensive interview preparation with mock interviews, coding challenges, HR rounds, and salary negotiation strategies.</p>
+                            <div class="course-features">
+                                <span><i class="fas fa-calendar-alt"></i> 10 Days</span>
+                                <span><i class="fas fa-users"></i> Online/Offline</span>
+                                <span><i class="fas fa-certificate"></i> Certified</span>
+                                <span><i class="fas fa-handshake"></i> Job Ready</span>
+                            </div>
+                            <a href="courses.html" class="btn btn-glow w-100 mt-3">
+                                <i class="fas fa-play me-2"></i>Start Learning
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Success <span class="text-gradient">Stories</span></h2>
+                    <p class="section-subtitle">Hear from our successful students and satisfied clients who transformed their careers with AngamTech</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"AngamTech's Full Stack Development course completely transformed my career. The hands-on projects and expert mentorship helped me land a job at a top IT company with a 300% salary increase. The AI integration training was particularly valuable!"</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=70&width=70" alt="Priya Sharma" class="author-image">
+                            <div class="author-info">
+                                <h5>Priya Sharma</h5>
+                                <span>Full Stack Developer, Infosys</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The CRM system developed by AngamTech revolutionized our business operations. Their AI-powered solutions increased our efficiency by 400% and customer satisfaction by 95%. Exceptional technical expertise and professional service!"</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=70&width=70" alt="Rajesh Kumar" class="author-image">
+                            <div class="author-info">
+                                <h5>Rajesh Kumar</h5>
+                                <span>CEO, TechCorp Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The internship program at AngamTech provided real-world experience that no college could offer. Working on live projects with industry mentors prepared me perfectly for my career. Now I'm a successful AI engineer!"</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=70&width=70" alt="Arun Patel" class="author-image">
+                            <div class="author-info">
+                                <h5>Arun Patel</h5>
+                                <span>AI Engineer, Microsoft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: var(--gradient-1);">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-4">Ready to Transform Your Future?</h2>
+                    <p class="text-white mb-4 opacity-75">Join thousands of successful professionals who chose AngamTech for their career transformation. Get expert guidance, hands-on training, and guaranteed placement assistance.</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="contact.html" class="btn btn-3d" style="background: white; color: var(--primary-color);">
+                            <i class="fas fa-phone me-2"></i>Contact Us
+                        </a>
+                        <a href="courses.html" class="btn btn-3d" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">
+                            <i class="fas fa-graduation-cap me-2"></i>Enroll Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <h3 class="gradient-text mb-3">
+                            <img src="assets/images/logo.jpg" alt="AngamTech Logo" style="height: 40px; margin-right: 10px;">
+                            AngamTech IT Solutions
+                        </h3>
+                        <p class="text-light mb-4">Leading IT Solutions company in Dharmapuri, Tamil Nadu, specializing in innovative technology solutions, professional training programs, and career transformation with 100% placement assistance.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Full Stack Development</a></li>
+                        <li><a href="services.html">AI Agent Development</a></li>
+                        <li><a href="services.html">CRM Development</a></li>
+                        <li><a href="services.html">Digital Marketing</a></li>
+                        <li><a href="internship.html">Internship Programs</a></li>
+                        <li><a href="courses.html">Training Courses</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h5 class="footer-title">Contact Information</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i>Dharmapuri, Tamil Nadu, India</p>
+                        <p><i class="fas fa-phone"></i>+91 9786220194</p>
+                        <p><i class="fas fa-phone"></i>+91 95008 49882</p>
+                        <p><i class="fas fa-envelope"></i>infoangamtech@gmail.com</p>
+                        <p><i class="fas fa-globe"></i>www.angamtech.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.2);">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-light mb-0">&copy; 2024 AngamTech IT Solutions. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Privacy Policy</a>
+                    <a href="#" class="text-light me-3">Terms of Service</a>
+                    <a href="#" class="text-light">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <style>
+        .floating-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 15px 20px;
+            color: white;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-card i {
+            font-size: 1.5rem;
+        }
+
+        .card-1 { top: 10%; right: 20%; animation-delay: 0s; }
+        .card-2 { top: 30%; right: 5%; animation-delay: 0.5s; }
+        .card-3 { top: 50%; right: 25%; animation-delay: 1s; }
+        .card-4 { bottom: 40%; right: 10%; animation-delay: 1.5s; }
+        .card-5 { bottom: 20%; right: 30%; animation-delay: 2s; }
+        .card-6 { bottom: 5%; right: 15%; animation-delay: 2.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-3d-object {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .cube-container {
+            perspective: 1000px;
+        }
+
+        .cube-3d {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateCube3D 10s infinite linear;
+        }
+
+        .cube-3d .face {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: white;
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+        }
+
+        @keyframes rotateCube3D {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+        }
+
+        .mouse {
+            width: 25px;
+            height: 40px;
+            border: 2px solid white;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .wheel {
+            width: 3px;
+            height: 10px;
+            background: white;
+            border-radius: 2px;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll 2s infinite;
+        }
+
+        @keyframes scroll {
+            0% { opacity: 1; top: 8px; }
+            100% { opacity: 0; top: 20px; }
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition-normal);
+            height: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            font-size: 5rem;
+            color: #1e88e5;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .stars {
+            margin-bottom: 1.5rem;
+        }
+
+        .stars i {
+            color: #fbbf24;
+            margin-right: 0.3rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: #4b5563;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #1e88e5;
+        }
+
+        .author-info h5 {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .author-info span {
+            color: #6b7280;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .floating-card {
+                position: static;
+                display: inline-block;
+                margin: 0.5rem;
+                animation: none;
+            }
+
+            .hero-3d-object {
+                position: static;
+                transform: none;
+                margin: 2rem 0;
+                text-align: center;
+            }
+        }
+    </style>
+</body>
+</html>

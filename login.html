@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register - AngamTech IT Solutions</title>
+    <meta name="description" content="Access your AngamTech account or create a new one to manage your courses, internships, and projects.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            padding: 2rem 0;
+        }
+        
+        .auth-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            box-shadow: var(--shadow-2xl);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+        
+        .auth-tabs .nav-link {
+            border: none;
+            border-radius: 15px;
+            font-weight: 600;
+            padding: 12px 30px;
+            margin: 0 5px;
+            transition: var(--transition-normal);
+        }
+        
+        .auth-tabs .nav-link.active {
+            background: var(--gradient-1);
+            color: white;
+            box-shadow: var(--shadow-colored);
+        }
+        
+        .social-login-btn {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 12px;
+            transition: var(--transition-normal);
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+        }
+        
+        .social-login-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form-floating .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(30, 136, 229, 0.25);
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6b7280;
+            z-index: 10;
+        }
+        
+        .auth-illustration {
+            background: var(--gradient-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .auth-illustration::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="authGrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23authGrid)"/></svg>');
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 20%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="cube-wrapper">
+                <div class="cube">
+                    <div class="face front">A</div>
+                    <div class="face back">T</div>
+                    <div class="face right">I</div>
+                    <div class="face left">T</div>
+                    <div class="face top">S</div>
+                    <div class="face bottom">L</div>
+                </div>
+            </div>
+            <div class="loading-text">Loading AngamTech...</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg glass-nav">
+            <div class="container">
+                <a class="navbar-brand logo-3d" href="index.html">
+                    <img src="assets/images/logo.jpg" alt="AngamTech Logo" class="logo-image">
+                    <span class="gradient-text">AngamTech</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="internship.html">Internship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-glow ms-3 active" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Auth Container -->
+    <div class="auth-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="auth-card">
+                        <div class="row g-0">
+                            <!-- Illustration Side -->
+                            <div class="col-lg-6 auth-illustration">
+                                <div class="floating-elements">
+                                    <div class="floating-element"></div>
+                                    <div class="floating-element"></div>
+                                    <div class="floating-element"></div>
+                                </div>
+                                <div class="text-center text-white p-5 position-relative z-index-1">
+                                    <div class="mb-4">
+                                        <i class="fas fa-rocket fa-5x opacity-75"></i>
+                                    </div>
+                                    <h2 class="mb-3">Welcome to AngamTech</h2>
+                                    <p class="lead mb-4">Join thousands of students and professionals who are advancing their careers with our cutting-edge technology programs.</p>
+                                    <div class="row text-center">
+                                        <div class="col-4">
+                                            <h4 class="fw-bold">500+</h4>
+                                            <small>Students</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <h4 class="fw-bold">50+</h4>
+                                            <small>Courses</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <h4 class="fw-bold">95%</h4>
+                                            <small>Success Rate</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Form Side -->
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <!-- Tabs -->
+                                    <ul class="nav nav-pills auth-tabs justify-content-center mb-4" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button" role="tab">
+                                                <i class="fas fa-sign-in-alt me-2"></i>Login
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab">
+                                                <i class="fas fa-user-plus me-2"></i>Register
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="tab-content">
+                                        <!-- Login Form -->
+                                        <div class="tab-pane fade show active" id="login" role="tabpanel">
+                                            <h3 class="text-center mb-4">Welcome Back!</h3>
+                                            
+                                            <!-- Social Login -->
+                                            <div class="row g-2 mb-4">
+                                                <div class="col-6">
+                                                    <a href="#" class="social-login-btn d-flex align-items-center justify-content-center w-100">
+                                                        <i class="fab fa-google me-2"></i>Google
+                                                    </a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="#" class="social-login-btn d-flex align-items-center justify-content-center w-100">
+                                                        <i class="fab fa-facebook-f me-2"></i>Facebook
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="text-center mb-4">
+                                                <span class="text-muted">or login with email</span>
+                                            </div>
+                                            
+                                            <form id="loginForm">
+                                                <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
+                                                    <label for="loginEmail">Email address</label>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3 position-relative">
+                                                    <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                                                    <label for="loginPassword">Password</label>
+                                                    <button type="button" class="password-toggle" onclick="togglePassword('loginPassword')">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                                
+                                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                                        <label class="form-check-label" for="rememberMe">
+                                                            Remember me
+                                                        </label>
+                                                    </div>
+                                                    <a href="#" class="text-primary text-decoration-none">Forgot Password?</a>
+                                                </div>
+                                                
+                                                <button type="submit" class="btn btn-3d w-100 mb-3" style="background: var(--gradient-1); color: white;">
+                                                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                                                </button>
+                                            </form>
+                                        </div>
+                                        
+                                        <!-- Register Form -->
+                                        <div class="tab-pane fade" id="register" role="tabpanel">
+                                            <h3 class="text-center mb-4">Create Account</h3>
+                                            
+                                            <!-- Social Register -->
+                                            <div class="row g-2 mb-4">
+                                                <div class="col-6">
+                                                    <a href="#" class="social-login-btn d-flex align-items-center justify-content-center w-100">
+                                                        <i class="fab fa-google me-2"></i>Google
+                                                    </a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="#" class="social-login-btn d-flex align-items-center justify-content-center w-100">
+                                                        <i class="fab fa-facebook-f me-2"></i>Facebook
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="text-center mb-4">
+                                                <span class="text-muted">or register with email</span>
+                                            </div>
+                                            
+                                            <form id="registerForm">
+                                                <div class="row g-3 mb-3">
+                                                    <div class="col-6">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                                            <label for="firstName">First Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                                            <label for="lastName">Last Name</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control" id="registerEmail" placeholder="name@example.com" required>
+                                                    <label for="registerEmail">Email address</label>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3">
+                                                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                                                    <label for="phone">Phone Number</label>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3 position-relative">
+                                                    <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
+                                                    <label for="registerPassword">Password</label>
+                                                    <button type="button" class="password-toggle" onclick="togglePassword('registerPassword')">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3 position-relative">
+                                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                                                    <label for="confirmPassword">Confirm Password</label>
+                                                    <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                                
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="interest" required>
+                                                        <option value="">Select your interest</option>
+                                                        <option value="web-development">Web Development</option>
+                                                        <option value="mobile-development">Mobile Development</option>
+                                                        <option value="data-science">Data Science & AI</option>
+                                                        <option value="cloud-computing">Cloud Computing</option>
+                                                        <option value="cybersecurity">Cybersecurity</option>
+                                                        <option value="digital-marketing">Digital Marketing</option>
+                                                        <option value="internship">Internship Program</option>
+                                                    </select>
+                                                    <label for="interest">Primary Interest</label>
+                                                </div>
+                                                
+                                                <div class="form-check mb-4">
+                                                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                                    <label class="form-check-label" for="agreeTerms">
+                                                        I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                                                    </label>
+                                                </div>
+                                                
+                                                <div class="form-check mb-4">
+                                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                                    <label class="form-check-label" for="newsletter">
+                                                        Subscribe to our newsletter for updates and offers
+                                                    </label>
+                                                </div>
+                                                
+                                                <button type="submit" class="btn btn-3d w-100 mb-3" style="background: var(--gradient-1); color: white;">
+                                                    <i class="fas fa-user-plus me-2"></i>Create Account
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Password toggle functionality
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const icon = input.nextElementSibling.nextElementSibling.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+        
+        // Login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            if (email && password) {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Logging in...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    alert('Login successful! Redirecting to dashboard...');
+                    // Redirect to dashboard or home page
+                    window.location.href = 'index.html';
+                }, 2000);
+            }
+        });
+        
+        // Register form submission
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            if (validateForm(this)) {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Creating Account...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    alert('Account created successfully! Please check your email for verification.');
+                    // Switch to login tab
+                    document.getElementById('login-tab').click();
+                    this.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            }
+        });
+        
+        // Password strength indicator
+        document.getElementById('registerPassword').addEventListener('input', function() {
+            const password = this.value;
+            const strength = getPasswordStrength(password);
+            // You can add visual feedback here
+        });
+        
+        function getPasswordStrength(password) {
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            return strength;
+        }
+    </script>
+</body>
+</html>

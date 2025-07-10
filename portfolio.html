@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - AngamTech IT Solutions</title>
+    <meta name="description" content="Explore AngamTech's impressive portfolio of successful projects and innovative solutions across various industries.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="cube-wrapper">
+                <div class="cube">
+                    <div class="face front">A</div>
+                    <div class="face back">T</div>
+                    <div class="face right">I</div>
+                    <div class="face left">T</div>
+                    <div class="face top">S</div>
+                    <div class="face bottom">L</div>
+                </div>
+            </div>
+            <div class="loading-text">Loading AngamTech...</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg glass-nav">
+            <div class="container">
+                <a class="navbar-brand logo-3d" href="index.html">
+                    <img src="assets/images/logo.jpg" alt="AngamTech Logo" class="logo-image">
+                    <span class="gradient-text">AngamTech</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="internship.html">Internship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow active" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-glow" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-glow ms-3" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="animated-bg"></div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb" class="mb-4">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Portfolio</li>
+                        </ol>
+                    </nav>
+                    <h1 class="hero-title text-white mb-4">Our Portfolio</h1>
+                    <p class="hero-subtitle">Discover our impressive collection of successful projects and innovative solutions that have transformed businesses across various industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Stats -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item bg-white rounded-4 shadow-lg p-4">
+                        <h3 class="counter" data-target="150">0</h3>
+                        <p class="mb-0 text-muted fw-semibold">Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item bg-white rounded-4 shadow-lg p-4">
+                        <h3 class="counter" data-target="120">0</h3>
+                        <p class="mb-0 text-muted fw-semibold">Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item bg-white rounded-4 shadow-lg p-4">
+                        <h3 class="counter" data-target="25">0</h3>
+                        <p class="mb-0 text-muted fw-semibold">Industries Served</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item bg-white rounded-4 shadow-lg p-4">
+                        <h3 class="counter" data-target="98">0</h3>
+                        <p class="mb-0 text-muted fw-semibold">Success Rate %</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Browse through our diverse portfolio of successful projects across different technologies and industries.</p>
+                </div>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="btn-group flex-wrap" role="group">
+                        <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all" onclick="filterPortfolio('all')">All Projects</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="web" onclick="filterPortfolio('web')">Web Development</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="mobile" onclick="filterPortfolio('mobile')">Mobile Apps</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="ecommerce" onclick="filterPortfolio('ecommerce')">E-commerce</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="ai" onclick="filterPortfolio('ai')">AI/ML</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="cloud" onclick="filterPortfolio('cloud')">Cloud Solutions</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="row g-4">
+                <!-- Web Development Projects -->
+                <div class="col-lg-4 col-md-6 portfolio-item web">
+                    <div class="service-card card-hover-1 h-100">
+                        <div class="position-relative overflow-hidden rounded-3 mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" alt="E-Learning Platform" class="img-fluid">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-primary">Web App</span>
+                            </div>
+                        </div>
+                        <h4>E-Learning Platform</h4>
+                        <p class="text-muted mb-3">A comprehensive online learning management system with interactive courses, progress tracking, and certification features.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark">React</span>
+                            <span class="badge bg-light text-dark">Node.js</span>
+                            <span class="badge bg-light text-dark">MongoDB</span>
+                            <span class="badge bg-light text-dark">Socket.io</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="service-link" onclick="openModal('project1Modal')">View Details <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item web">
+                    <div class="service-card card-hover-2 h-100">
+                        <div class="position-relative overflow-hidden rounded-3 mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Healthcare Management" class="img-fluid">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-success">Healthcare</span>
+                            </div>
+                        </div>
+                        <h4>Healthcare Management System</h4>
+                        <p class="text-muted mb-3">Digital solution for hospitals to manage patient records, appointments, and medical history with secure data handling.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark">Vue.js</span>
+                            <span class="badge bg-light text-dark">Laravel</span>
+                            <span class="badge bg-light text-dark">MySQL</span>
+                            <span class="badge bg-light text-dark">AWS</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile App Projects -->
+                <div class="col-lg-4 col-md-6 portfolio-item mobile">
+                    <div class="service-card card-hover-3 h-100">
+                        <div class="position-relative overflow-hidden rounded-3 mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Food Delivery App" class="img-fluid">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-warning">Mobile App</span>
+                            </div>
+                        </div>
+                        <h4>Food Delivery App</h4>
+                        <p class="text-muted mb-3">On-demand food delivery application with real-time tracking, payment integration, and restaurant management features.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark">React Native</span>
+                            <span class="badge bg-light text-dark">Firebase</span>
+                            <span class="badge bg-light text-dark">Stripe</span>
+                            <span class="badge bg-light text-dark">Google Maps</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">App Store</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item mobile">
+                    <div class="service-card card-hover-4 h-100">
+                        <div class="position-relative overflow-hidden rounded-3 mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Fitness Tracker" class="img-fluid">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-info">Fitness</span>
+                            </div>
+                        </div>
+                        <h4>Fitness Tracker App</h4>
+                        <p class="text-muted mb-3">Comprehensive fitness tracking application with workout plans, nutrition tracking, and social features for motivation.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark">Flutter</span>
+                            <span class="badge bg-light text-dark">Dart</span>
+                            <span class="badge bg-light text-dark">SQLite</span>
+                            <span class="badge bg-light text-dark">HealthKit</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Projects -->
+                <div class="col-lg-4 col-md-6 portfolio-item ecommerce">
+                    <div class="service-card card-hover-5 h-100">
+                        <div class="position-relative overflow-hidden rounded-3 mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Fashion E-commerce" class="img-fluid">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-danger">E-commerce</span>
+                            </div>
+                        </div>
+                        <h4>Fashion E-commerce Platform</h4>
+                        <p class="text-muted mb-3">Modern e-commerce platform for fashion brands with advanced filtering, AR try-on, and personalized recommendations.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark">Next.js</span>
+                            <span class="badge bg-light text-dark">Shopify</span>
+                            <span class="badge bg-light text-dark">Stripe</span>
+                            <span class="badge bg-light text-dark">AR.js</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI/ML Projects -->
+                <div class="col-lg-4 col-md-6 portfolio-item ai">
+                    <div class="service-card card-hover-6 h-100">
+                        <div class="position-relative overflow-hidden rounded-3 mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" alt="AI Chatbot" class="img-fluid">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-secondary">AI/ML</span>
+                            </div>
+                        </div>
+                        <h4>Intelligent Customer Support Bot</h4>
+                        <p class="text-muted mb-3">AI-powered chatbot with natural language processing capabilities for automated customer support and query resolution.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark">Python</span>
+                            <span class="badge bg-light text-dark">TensorFlow</span>
+                            <span class="badge bg-light text-dark">NLP</span>
+                            <span class="badge bg-light text-dark">OpenAI</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Try Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="col-lg-4 col-md-6 portfolio-item cloud">
+                    <div class="service-card card-hover-7 h-100">
+                        <div class="position-relative overflow-hidden rounded-3 mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Cloud Migration" class="img-fluid">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-primary">Cloud</span>
+                            </div>
+                        </div>
+                        <h4>Enterprise Cloud Migration</h4>
+                        <p class="text-muted mb-3">Complete cloud migration solution for enterprise clients with zero downtime and enhanced security measures.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark">AWS</span>
+                            <span class="badge bg-light text-dark">Docker</span>
+                            <span class="badge bg-light text-dark">Kubernetes</span>
+                            <span class="badge bg-light text-dark">Terraform</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item web ecommerce">
+                    <div class="service-card card-hover-8 h-100">
+                        <div class="position-relative overflow-hidden rounded-3 mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Real Estate Platform" class="img-fluid">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-success">Real Estate</span>
+                            </div>
+                        </div>
+                        <h4>Real Estate Management Platform</h4>
+                        <p class="text-muted mb-3">Comprehensive real estate platform with property listings, virtual tours, and integrated CRM for agents and buyers.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark">Angular</span>
+                            <span class="badge bg-light text-dark">.NET Core</span>
+                            <span class="badge bg-light text-dark">PostgreSQL</span>
+                            <span class="badge bg-light text-dark">Azure</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item mobile ai">
+                    <div class="service-card card-hover-1 h-100">
+                        <div class="position-relative overflow-hidden rounded-3 mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Smart Home App" class="img-fluid">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-info">IoT</span>
+                            </div>
+                        </div>
+                        <h4>Smart Home Control App</h4>
+                        <p class="text-muted mb-3">IoT-based smart home automation app with voice control, energy monitoring, and AI-powered optimization features.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-light text-dark">React Native</span>
+                            <span class="badge bg-light text-dark">IoT</span>
+                            <span class="badge bg-light text-dark">Machine Learning</span>
+                            <span class="badge bg-light text-dark">Voice API</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="#" class="service-link">View Details <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-subtitle">Hear from our satisfied clients about their experience working with AngamTech on their projects.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"AngamTech delivered an exceptional e-commerce platform that exceeded our expectations. Their attention to detail and technical expertise is outstanding."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=70&width=70" alt="Sarah Johnson" class="author-image">
+                            <div class="author-info">
+                                <h5>Sarah Johnson</h5>
+                                <span>CEO, Fashion Forward</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The mobile app developed by AngamTech has revolutionized our business operations. The user experience is seamless and the performance is excellent."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=70&width=70" alt="Michael Chen" class="author-image">
+                            <div class="author-info">
+                                <h5>Michael Chen</h5>
+                                <span>Founder, TechStart</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Working with AngamTech was a game-changer for our digital transformation. Their cloud solutions improved our efficiency by 300%."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=70&width=70" alt="Emily Rodriguez" class="author-image">
+                            <div class="author-info">
+                                <h5>Emily Rodriguez</h5>
+                                <span>CTO, InnovaCorp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: var(--gradient-1);">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-4">Ready to Start Your Next Project?</h2>
+                    <p class="text-white mb-4 opacity-75">Let's collaborate to bring your vision to life with cutting-edge technology and innovative solutions.</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="contact.html" class="btn btn-3d" style="background: white; color: var(--primary-color);">Start Your Project</a>
+                        <a href="#" class="btn btn-3d" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">View All Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <h3 class="gradient-text mb-3">AngamTech IT Solutions</h3>
+                        <p class="text-light mb-4">Creating innovative digital solutions that transform businesses and drive success in the modern world.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="internship.html">Internships</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Innovation City, IC 12345</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@angamtech.com</p>
+                        <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-light mb-0">&copy; 2024 AngamTech IT Solutions. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Privacy Policy</a>
+                    <a href="#" class="text-light">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
